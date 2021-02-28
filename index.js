@@ -33,7 +33,7 @@ const DB_USER = {
 
 app.post('/searchUser', verifyUser, async (req, res, next) => {
     let api = process.env.API_URL
-    const cookieString = 'aq chaaweret tqveni cookie'
+    const cookieString = 'insert your instagram cookie'
     api = api.replace('{key}', req.body.user)
     const data = await new Promise((resolve, reject) => {
         request({

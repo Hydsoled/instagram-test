@@ -47,12 +47,16 @@ class Body extends Component {
     async getUser(event) {
         const data = await new Promise(((resolve, reject) => {
             axios.post('http://localhost:4200/searchUser',
-                {user: event}
+                {user: event},
+                {
+                    headers: {
+                        'authorization': document.cookie
+                    }
+                }
             ).then((response) => {
                 const users = response.data.users
                 const tags = response.data.hashtags
                 const data = []
-                console.log(response.data)
                 for (let i = 0; users && i < users.length && i < 10; i++) {
                     data.push({
                         name: users[i].user.username,

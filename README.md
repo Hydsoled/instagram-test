@@ -10,3 +10,5 @@ npm run build<br>
 npm run app<br>
 
 Do not forget to insert your instagram cookie in index.js file line 36
+Username: hydsoled<br>
+Password: Dato123
